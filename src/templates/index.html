@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>укоротитель ссылок</h1>
+
+    <form action="/" method="get">
+
+        <label for="url">URL:</label>
+        <input type="url" name="url" id="url" required placeholder="http://example.url.ru">
+
+        <input type="submit" value="Укоротить">
+        
+    </form>
+
+    <br>
+
+    {% if url %}
+        <p>Укороченный URL: <a href="{{ url }}">{{ url }}</a></p>
+    {% endif %}
+
+
+
+</body>
+</html>
